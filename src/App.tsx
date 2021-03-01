@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from "@material-ui/core/Container";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
+import React, { Component } from "react";
+import { renderRoutes } from "react-router-config";
+import { Switch } from "react-router-dom";
+import routes from "./routes";
+export default class App extends Component {
+  componentDidMount() {}
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <>
+        <CssBaseline />
+        <Container>
+          <Typography component="div" style={{ height: "100vh" }}>
+            <Switch>{renderRoutes(routes)}</Switch>
+          </Typography>
+        </Container>
+      </>
+    );
+  }
 }
-
-export default App;
