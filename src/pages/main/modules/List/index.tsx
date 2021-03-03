@@ -40,6 +40,30 @@ export default function SimpleList() {
             <ListItemText primary="useUesState" />
           </ListItem>
         </Link>
+        <Link to="/useusecontext">
+          <ListItem button>
+            <ListItemIcon>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="useUesContext" />
+          </ListItem>
+        </Link>
+        <Link to="/useusereducer">
+          <ListItem button>
+            <ListItemIcon>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="useUesReducer" />
+          </ListItem>
+        </Link>
+        <Link to="/useuseref">
+          <ListItem button>
+            <ListItemIcon>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="useUesRef" />
+          </ListItem>
+        </Link>
       </List>
     </div>
   );
